@@ -32,7 +32,6 @@ public class ArticleController {
     }
     @PostMapping("/")
     public Article createArticle(@RequestBody Article article){
-        Article a = new Article(article.getName(), article.getBarcodethingy(), article.getPackagingQuantity(), article.getQuantity(), article.getCategory());
         return mongoTemplate.save(article);
     }
     @DeleteMapping("/{id}")
