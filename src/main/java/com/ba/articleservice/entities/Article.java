@@ -1,7 +1,13 @@
 package com.ba.articleservice.entities;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "Article")
 public class Article {
-    private long id;
+
+    @Id
+    private String id;
     private String name;
     private long barcodethingy;
     private long quantity;
@@ -17,8 +23,11 @@ public class Article {
         this.packagingQuantity = packagingQuantity;
         this.category = category;
     }
-    
-    public long getId() {
+    /* 
+    public void setId(long id) {
+        this.id = id;
+    } */
+    public String getId() {
         return id;
     }
     public String getName() {

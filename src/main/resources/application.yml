@@ -1,0 +1,13 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: articleservice
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: articledb
+  jpa:
+    hibernate:
+      ddl-auto: update
